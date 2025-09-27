@@ -36,3 +36,8 @@ const Name = prompt('Please enter your name');
 const Age = prompt('Please enter your age');
 const Nationality = prompt('Please enter your nationality');
 console.log(`${Name} ${Age} ${Nationality}`);
+
+// ДЗ 3.3
+const number = 68686;
+const digits = number.toString().split("").join(" ");
+console.log(digits);
