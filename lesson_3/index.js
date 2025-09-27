@@ -1,12 +1,18 @@
 
 // ДЗ 3.1
+const person = Symbol("id");
+console.log(typeof(person));
+
 let str = "Chicken";
 console.log(typeof(str));
 
 const num = 99;
 console.log(typeof(num));
 
-var age;
+const big_num = 99n;
+console.log(typeof(big_num));
+
+let age;
 console.log(typeof(age));
 
 const isAdult = true;
@@ -17,3 +23,9 @@ console.log(typeof(count));
 
 let zero = null;
 console.log(zero);
+
+let player = {};
+console.log(typeof(player));
+
+let user = [5, 'C++', null, 99];
+console.log(typeof(user));
