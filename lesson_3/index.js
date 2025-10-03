@@ -30,7 +30,6 @@ console.log(typeof(player));
 let user = [5, 'C++', null, 99];
 console.log(typeof(user));
 
-
 // ДЗ 3.2
 const Name = prompt('Please enter your name');
 const Age = prompt('Please enter your age');
