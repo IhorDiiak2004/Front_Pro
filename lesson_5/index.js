@@ -35,3 +35,15 @@ while (i <= 100 && i * i <= N) {
 
 // Дз 5.4
 
+const num = Number(prompt("Введіть ціле число:"));
+let is_Simple = true;
+
+for (let i = 2; i < num; i++) {
+  if (num <= 1 || num % i === 0) {
+    is_Simple = false;
+    break;
+  }
+}
+
+alert(is_Simple ? `${num} — просте число` : `${num} — не є простим числом`);
+
