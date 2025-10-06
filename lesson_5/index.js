@@ -23,3 +23,15 @@ while (dollars <= 100) {
 
 
 // Дз 5.3
+
+const N = Number(prompt("Введіть ціле число N:"));
+
+let i = 1;
+while (i <= 100 && i * i <= N) {
+  console.log(i);
+  i++;
+}
+
+
+// Дз 5.4
+
