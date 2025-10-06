@@ -11,3 +11,15 @@ console.log(result);
 
 
 // Дз 5.2
+
+const course = 26; 
+let dollars = 10;
+
+while (dollars <= 100) {
+  const hryvnias = dollars * course;
+  console.log(`${dollars} $ = ${hryvnias} ₴`);
+  dollars += 10;
+}
+
+
+// Дз 5.3
