@@ -40,4 +40,19 @@ if (a === b && b === c) {
 }
 
 
+// Дз 4.3
+const year = prompt("Рік народження:");
+const city = prompt("Місто проживання:");
+const sport = prompt("Улюблений вид спорту:");
+
+const age = new Date().getFullYear() - year;
+
+const capitals = { "Київ": "України", "Вашингтон": "США", "Лондон": "Великобританії" };
+const cityMsg = capitals[city] ? `Ти живеш у столиці ${capitals[city]}` : `Ти живеш у місті ${city}`;
+
+const champs = { футбол: "Ліонель Мессі", теніс: "Еліна Світоліна", баскетбол: "Леброн Джеймс" };
+const sportMsg = champs[sport.toLowerCase()] ? `Круто! Хочеш стати як ${champs[sport.toLowerCase()]}?` : "";
+
+alert(`Твій вік: ${age}\n${cityMsg}\n${sportMsg}`);
+
 
