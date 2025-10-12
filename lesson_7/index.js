@@ -39,7 +39,7 @@ function averageOfNumbers(arr) {
   return sum / count;
 }
 
-let mixedArray = [10, "text", null, 20, true, 20, "10"];
+let mixedArray = [2, "text", null, 3, true, 4, "10"];
 let result = averageOfNumbers(mixedArray);
 
 console.log("Середнє арифметичне чисел:", result);
