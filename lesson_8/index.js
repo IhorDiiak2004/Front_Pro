@@ -1,6 +1,5 @@
 
-// Дз 8.1
-
+// ДЗ 8.1
 function sum(a) {
   let total = a;
 
@@ -10,8 +9,10 @@ function sum(a) {
   }
 
   another.valueOf = function() {
-  return total;
+    return total;
   };
+
+  return another; 
 }
 
 console.log(+sum(4)(5)(6)); 
