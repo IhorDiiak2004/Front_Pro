@@ -5,12 +5,12 @@ let ladder = {
   ourstep: 0,
 
   up: function() {
-    this. ourstep++;
+    this.ourstep++;
     return this; 
   },
 
   down: function() {
-    this. ourstep--;
+    this.ourstep--;
     return this; 
   },
 
