@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Зміна кольору тексту</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <p id="text">Привіт!</p>
+  <button id="changeColorBtn">Змінити колір</button>
+
+  <script>
+    const text = document.getElementById("text");
+    const button = document.getElementById("changeColorBtn");
+
+    let isChanged = false;
+
+    button.addEventListener("click", () => {
+      text.style.color = isChanged ? "black" : "red";
+      isChanged = !isChanged;
+    });
+  </script>
+  
+</body>
+</html>
+
+
