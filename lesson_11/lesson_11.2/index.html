@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Таблиця Піфагора</title>
+
+  <style>
+    table, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      text-align: center;
+      padding: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <table id="table"></table>
+
+  <script>
+    let table = document.getElementById("table");
+
+    for (let i = 1; i <= 10; i++) {
+      let row = document.createElement("tr");
+      for (let j = 1; j <= 10; j++) {
+        let cell = document.createElement("td");
+        cell.textContent = i * j;
+        row.appendChild(cell);
+      }
+      table.appendChild(row);
+    }
+  </script>
+</body>
+</html>
