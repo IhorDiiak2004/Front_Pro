@@ -31,13 +31,12 @@
     const List = document.getElementById("List");
     const input = document.getElementById("newTask");
     const addBtn = document.getElementById("addBtn");
-    
+
 
     List.addEventListener("click", (event) => {
-    // якщо натиснули саме на кнопку
     if (event.target.tagName === "BUTTON") {
-    const li = event.target.closest("li"); // шукаємо батьківський <li>
-    if (li) li.remove(); // видаляємо цей пункт
+    const li = event.target.closest("li"); 
+    if (li) li.remove(); 
     }
    });
 
