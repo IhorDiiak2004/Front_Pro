@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+  <style>
+    li {
+      margin: 5px 0;
+    }
+    button {
+      margin-left: 10px;
+    }
+  </style>
+
+</head>
+<body>
+
+  <ul id="List">
+    <li>Завдання 1 <button>Видалити</button></li>
+    <li>Завдання 2 <button>Видалити</button></li>
+    <li>Завдання 3 <button>Видалити</button></li>
+  </ul>
+
+  <input type="text" id="newTask" placeholder="Додати нове завдання">
+  <button id="addBtn">Додати</button>
+
+  <script>
+    const List = document.getElementById("List");
+    const input = document.getElementById("newTask");
+    const addBtn = document.getElementById("addBtn");
+    
+
+    List.addEventListener("click", (event) => {
+    // якщо натиснули саме на кнопку
+    if (event.target.tagName === "BUTTON") {
+    const li = event.target.closest("li"); // шукаємо батьківський <li>
+    if (li) li.remove(); // видаляємо цей пункт
+    }
+   });
+
+
+    addBtn.addEventListener("click", () => {
+      const text = input.value.trim();
+      if (text) {
+        const li = document.createElement("li");
+        li.textContent = text + " ";
+        const delBtn = document.createElement("button");
+        delBtn.textContent = "Видалити";
+        li.appendChild(delBtn);
+        List.appendChild(li); 
+        input.value = "";
+      }
+    });
+  </script>
+
+</body>
+</html>

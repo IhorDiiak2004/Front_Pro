@@ -11,25 +11,18 @@
   </style>
 </head>
 <body>
-  <h2>Випадкове зображення</h2>
   <img id="randomImage" src="" alt="Випадкове зображення">
   <br>
   <button onclick="showRandomImage()">Показати інше</button>
 
-<script>
-function showRandomImage() {
-  const images = [
-    '1.png',
-    '2.png',
-    '3.png',
-    '4.png'
-  ];
-  
-  const randomIndex = Math.floor(Math.random() * images.length);
-  document.getElementById('randomImage').src = 'images/' + images[randomIndex];
-}
+  <script>
+  function showRandomImage() {
+    const n = Math.floor(Math.random() * 9) + 1;
+    document.getElementById('randomImage').src = '../images/' + images[randomIndex];
 
-window.onload = showRandomImage;
+  }
+  window.onload = showRandomImage;
 </script>
+
 </body>
 </html>
