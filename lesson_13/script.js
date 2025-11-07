@@ -1,8 +1,8 @@
 
 const form = document.querySelector('#contactForm');
 
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
 
   const data = Object.fromEntries(new FormData(form).entries());
   const errors = {};
