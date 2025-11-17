@@ -57,6 +57,7 @@ const phoneBook = {
   addContact(newContact) {
     phoneBook.contacts.push(newContact);
   }
+  
 };
 
 phoneBook.addContact({

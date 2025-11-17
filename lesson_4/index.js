@@ -32,11 +32,11 @@ let b = number[1];
 let c = number[2];
 
 if (a === b && b === c) {
-    console.log("Усі цифри однакові");
+    console.log("Цифри однакові");
 } else if (a === b || b === c || a === c) {
     console.log("Серед цифр є однакові");
 } else {
-    console.log("Усі цифри різні");
+    console.log("Цифри різні");
 }
 
 

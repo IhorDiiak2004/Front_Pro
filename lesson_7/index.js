@@ -13,8 +13,8 @@ function removeChars(str, charsToRemove) {
 }
 
 const inputString = "hello world";
-const chars = ['l', 'd'];
-
+const chars = ['l', 'd']; // "ld"
+ 
 const output = removeChars(inputString, chars);
 console.log(output); 
 

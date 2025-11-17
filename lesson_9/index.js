@@ -15,7 +15,7 @@ let ladder = {
   },
 
   showStep: function() {
-    console.log(this. ourstep);
+    console.log(this.ourstep);
     return this; 
   }
 };

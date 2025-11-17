@@ -28,18 +28,20 @@
   <button id="addBtn">Додати</button>
 
   <script>
-    const List = document.getElementById("List");
+    const list = document.getElementById("List");
     const input = document.getElementById("newTask");
     const addBtn = document.getElementById("addBtn");
 
 
-    List.addEventListener("click", (event) => {
+    list.addEventListener("click", (event) => {
     if (event.target.tagName === "BUTTON") {
-    const li = event.target.closest("li"); 
-    if (li) li.remove(); 
-    }
+    const li = event.target.closest("li");
+    
+      if (li) {
+      li.remove();
+      }
+     }
    });
-
 
     addBtn.addEventListener("click", () => {
       const text = input.value.trim();
@@ -49,7 +51,7 @@
         const delBtn = document.createElement("button");
         delBtn.textContent = "Видалити";
         li.appendChild(delBtn);
-        List.appendChild(li); 
+        list.appendChild(li); 
         input.value = "";
       }
     });

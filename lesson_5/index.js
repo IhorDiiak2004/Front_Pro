@@ -1,4 +1,5 @@
 
+
 // Дз 5.1
 
 let result = "";
@@ -11,7 +12,6 @@ for (let i = 20; i <= 30; i += 0.5) {
 }
 
 console.log(result);
-
 
 
 // Дз 5.2
@@ -42,12 +42,15 @@ while (i <= 100 && i * i <= N) {
 const num = Number(prompt("Введіть ціле число:"));
 let is_Simple = true;
 
-for (let i = 2; i < num; i++) {
-  if (num <= 1 || num % i === 0) {
+if (num <= 1){
+  is_Simple = false;  
+} else { 
+  for (let i = 2; i < num; i++) {
+  if (num % i === 0) {
     is_Simple = false;
     break;
   }
+ }
 }
-
 alert(is_Simple ? `${num} — просте число` : `${num} — не є простим числом`);
 
