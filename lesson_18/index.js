@@ -1,6 +1,6 @@
 
 
-let time = 360; 
+let time = 80; 
 const timer = document.getElementById("timer");
 
 const id = setInterval(() => {
