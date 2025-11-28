@@ -1,20 +1,17 @@
 
-const API_KEY = "48f91bd0b8ca13ef8d21051c605b6708";
+const API_KEY = "095d997c0c7fcc37471531e0bd8d1126";
 const cityName = "Lviv";
-const lat = 49;
-const lon = 24; 
+const lat = 49.85;
+const lon = 24.05; 
 
 const weatherBlock = document.getElementById("weather");
 const btn = document.getElementById("btn");
 
 async function getData() {
-  weatherBlock.textContent = "Завантаження...";
-
-  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric&lang=ua`;
 
   try {
-    const res = await fetch(url);
-    const data = await res.json();
+    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric&lang=ua`);
+    const data = await response.json();
 
     weatherBlock.textContent = "";
 
