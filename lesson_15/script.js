@@ -5,19 +5,9 @@ const taskList = document.getElementById("taskList");
 
 let tasks = [];
 
-// ---- Завантаження при старті ----
-const savedTasks = localStorage.getItem("todoList");
-if (savedTasks) {
-  tasks = JSON.parse(savedTasks);
-}
-renderTasks();
-
-// ---- Додавання задачі ----
 addButton.addEventListener("click", () => {
   let text = taskInput.value;
 
-  // ✔ Перевірка без .trim():
-  // видаляємо пробіли вручну через replace
   const textWithoutSpaces = text.replace(/ /g, "");
   if (textWithoutSpaces === "") return;
 
@@ -28,7 +18,6 @@ addButton.addEventListener("click", () => {
   renderTasks();
 });
 
-// ---- Видалення задачі (делегування) ----
 taskList.addEventListener("click", (event) => {
   if (event.target.tagName === "BUTTON") {
     const indexToDelete = Number(event.target.dataset.index);
@@ -39,21 +28,12 @@ taskList.addEventListener("click", (event) => {
   }
 });
 
-// ---- Функції ----
-
-// Збереження в localStorage
-function saveTasks() {
-  localStorage.setItem("todoList", JSON.stringify(tasks));
-}
-
-// Очищення UL без innerHTML
 function clearTaskList() {
   while (taskList.firstChild) {
     taskList.removeChild(taskList.firstChild);
   }
 }
 
-// Відображення
 function renderTasks() {
   clearTaskList();
 
@@ -70,4 +50,15 @@ function renderTasks() {
     li.append(span, deleteButton);
     taskList.append(li);
   });
+}
+
+renderTasks();
+
+const savedTasks = localStorage.getItem("todoList");
+if (savedTasks) {
+  tasks = JSON.parse(savedTasks);
+}
+
+function saveTasks() {
+  localStorage.setItem("todoList", JSON.stringify(tasks));
 }
