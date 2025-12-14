@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slash</title>
+</head>
+<body>
+
+    <div class="container mt-5">
+    <h1 class="text-center mb-4">TODO List</h1>
+
+    <div class="input-group mb-3">
+        <input id="taskInput" type="text" class="form-control" placeholder="Нове завдання...">
+        <button id="addTaskBtn" class="btn btn-success">Додати</button>
+    </div>
+
+    <ul id="taskList" class="list-group"></ul>
+</div>
+
+<div class="modal fade" id="taskModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Текст завдання</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body" id="modalTaskText"></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрити</button>
+      </div>
+    </div>
+  </div>
+</div>
+    
+</body>
+</html>
