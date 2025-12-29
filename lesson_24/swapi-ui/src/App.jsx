@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import './App.css';
 import RequestForm from './components/RequestForm';
 import ResponseBlock from './components/ResponseBlock';
 
