@@ -1,0 +1,13 @@
+.smile-item {
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.smile {
+  font-size: 48px;
+}
+
+.winner-smile {
+  font-size: 64px;
+  margin: 10px 0;
+}
